@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Generate Image{% endblock %}
+{% block content %}
+    <h2>Generate an Image</h2>
+    <form action="{{ url_for('generate') }}" method="post">
+        <label for="prompt">Enter Prompt:</label>
+        <input type="text" id="prompt" name="prompt" required>
+        <label for="quality">Select Quality:</label>
+        <select id="quality" name="quality">
+            <option value="standard">Standard</option>
+            <option value="hd">HD</option>
+        </select>
+        <button type="submit">Generate</button>
+    </form>
+    {% if image_url %}
+        <h3>Generated Image:</h3>
+        <img src="{{ image_url }}" alt="Generated Image">
+    {% endif %}
+{% endblock %}

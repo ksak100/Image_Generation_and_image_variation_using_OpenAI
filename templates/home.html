@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h2>Welcome to the Image Generation and Variation App</h2>
+    <p>Choose an option:</p>
+    <ul>
+        <li><a href="{{ url_for('generate') }}">Generate an Image</a></li>
+        <li><a href="{{ url_for('variation') }}">Create an Image Variation</a></li>
+    </ul>
+{% endblock %}
