@@ -37,7 +37,7 @@ This project demonstrates a web application built with Flask to generate images 
 
 4. Set up your OpenAI API key in your environment:
    ```sh
-   export OPENAI_API_KEY='your-api-key-here'  , use `set`
+   export OPENAI_API_KEY='your-api-key-here'
    ```
    On Windows
     ```sh
