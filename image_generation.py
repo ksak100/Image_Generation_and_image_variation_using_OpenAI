@@ -2,10 +2,10 @@ import openai
 from openai import OpenAI
 import sys
 import os
-#from src.logger import logging
-#from src.exception import CustomException
-from utils import user_prompt
-from utils import user_quality
+from src.logger import logging
+from src.exception import CustomException
+from src.utils import user_prompt
+from src.utils import user_quality
 
 class ImageGeneration():
     def __init__(self, prompt, quality):
@@ -14,7 +14,7 @@ class ImageGeneration():
         self.quality=quality
     
     def generate_image(self):
-        #logging.info("Starting generating images using given prompt")
+        logging.info("Starting generating images using given prompt")
 
         try:
             client=OpenAI()
@@ -28,7 +28,7 @@ class ImageGeneration():
 
             image_url=response.data[0].url
 
-            #logging.info("Completed Generating image")
+            logging.info("Completed Generating image")
             return image_url
 
         except openai.OpenAIError as e:

@@ -8,6 +8,6 @@ RUN pip install -r requirements.txt
 
 RUN pip install python-dotenv
 
-EXPOSE 5000
+EXPOSE 8080
 
-CMD python app.py
+CMD python main.py

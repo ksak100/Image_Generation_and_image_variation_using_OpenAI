@@ -1,7 +1,7 @@
 import openai
 from openai import OpenAI
 import sys
-from utils import get_image_file_path
+from src.utils import get_image_file_path
 
 class ImageVariation():
     def __init__(self,file_path):

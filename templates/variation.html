@@ -2,11 +2,24 @@
 {% block title %}Image Variation{% endblock %}
 {% block content %}
     <h2>Create an Image Variation</h2>
+
+    <!-- Display flashed messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
     <form action="{{ url_for('variation') }}" method="post" enctype="multipart/form-data">
-        <label for="image">Upload Image:</label>
+        <label for="image">Upload Image: Please Upload .png format image</label>
         <input type="file" id="image" name="image" accept="image/*" required>
         <button type="submit">Create Variation</button>
     </form>
+
     {% if image_url %}
         <h3>Variation Image:</h3>
         <img src="{{ image_url }}" alt="Variation Image">
